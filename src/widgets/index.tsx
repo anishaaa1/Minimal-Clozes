@@ -18,7 +18,7 @@ async function onActivate(plugin: ReactRNPlugin) {
 
   await plugin.settings.registerStringSetting({
     id: "borderdark",
-    title: "Border Bottom Color | Dark Mode (hex)",
+    title: "Bottom Border Color | Dark Mode (hex)",
     description: "Provide a hex color for the bottom border in Dark Mode.",
     defaultValue: "#747676",
   });
