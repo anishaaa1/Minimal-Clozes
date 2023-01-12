@@ -12,7 +12,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     const borderlight = await reactivePlugin.settings.getSetting("borderlight");
     await reactivePlugin.app.registerCSS(
       "borderlight",
-      `[data-rem-tags~="plugin-style"] .light .cloze { border-bottom-color: ${borderlight}; }`
+      `.light .cloze { border-bottom-color: ${borderlight}; }`
     );
   });
 
@@ -27,7 +27,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     const borderdark = await reactivePlugin.settings.getSetting("borderdark");
     await reactivePlugin.app.registerCSS(
       "borderdark",
-      `[data-rem-tags~="plugin-style"] .dark .cloze { border-bottom-color: ${borderdark}; }`
+      `.dark .cloze { border-bottom-color: ${borderdark}; }`
     );
   });
 
@@ -42,7 +42,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     const borderhover = await reactivePlugin.settings.getSetting("borderhover");
     await reactivePlugin.app.registerCSS(
       "borderhover",
-      `[data-rem-tags~="plugin-style"] .cloze:hover { border-bottom-color: ${borderhover}; }`
+      `.cloze:hover { border-bottom-color: ${borderhover}; }`
     );
   });
 }
