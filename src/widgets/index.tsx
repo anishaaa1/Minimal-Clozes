@@ -9,7 +9,7 @@ async function onActivate(plugin: ReactRNPlugin) {
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderlight = await reactivePlugin.settings.getSetting<string>("borderlight");
+    const borderlight = await reactivePlugin.settings.getSetting("borderlight");
     await reactivePlugin.app.registerCSS(
       "borderlight",
       `.light .cloze { border-bottom-color: ${borderlight}; }`
@@ -24,7 +24,7 @@ async function onActivate(plugin: ReactRNPlugin) {
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderdark = await reactivePlugin.settings.getSetting<string>("borderdark");
+    const borderdark = await reactivePlugin.settings.getSetting("borderdark");
     await reactivePlugin.app.registerCSS(
       "borderdark",
       `.dark .cloze { border-bottom-color: ${borderdark}; }`
@@ -39,7 +39,7 @@ async function onActivate(plugin: ReactRNPlugin) {
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderhover = await reactivePlugin.settings.getSetting<string>("borderhover");
+    const borderhover = await reactivePlugin.settings.getSetting("borderhover");
     await reactivePlugin.app.registerCSS(
       "borderhover",
       `.cloze:hover { border-bottom-color: ${borderhover}; }`
@@ -49,17 +49,17 @@ async function onActivate(plugin: ReactRNPlugin) {
 await plugin.settings.registerStringSetting({
   id: "clozearrow",
   title: "Cloze Arrow Color (hex)",
-  description: "Provide a hex color for the bottom border when you hover over it.",
+  description: "Provide a hex color for the cloze arrow.",
   defaultValue: "#b388eb",
-});
+  });
 
 plugin.track(async (reactivePlugin) => {
-  const clozearrow = await reactivePlugin.settings.getSetting<string>("clozearrow");
+  const clozearrow = await reactivePlugin.settings.getSetting("clozearrow");
   await reactivePlugin.app.registerCSS(
     "clozearrow",
     `.rich-text-editor__change-cloze-button, .dark .rich-text-editor__change-cloze-button { color: ${clozearrow}; }`
   );
-});
+  });
 }
 
 async function onDeactivate(_: ReactRNPlugin) {}
