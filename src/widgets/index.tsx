@@ -9,7 +9,7 @@ async function onActivate(plugin: ReactRNPlugin) {
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderlight = await reactivePlugin.settings.getSetting("borderlight");
+    const borderlight = await reactivePlugin.settings.getSetting<string>("borderlight");
     await reactivePlugin.app.registerCSS(
       "borderlight",
       `.light .cloze { border-bottom-color: ${borderlight}; }`
@@ -24,7 +24,7 @@ async function onActivate(plugin: ReactRNPlugin) {
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderdark = await reactivePlugin.settings.getSetting("borderdark");
+    const borderdark = await reactivePlugin.settings.getSetting<string>("borderdark");
     await reactivePlugin.app.registerCSS(
       "borderdark",
       `.dark .cloze { border-bottom-color: ${borderdark}; }`
@@ -39,7 +39,7 @@ async function onActivate(plugin: ReactRNPlugin) {
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderhover = await reactivePlugin.settings.getSetting("borderhover");
+    const borderhover = await reactivePlugin.settings.getSetting<string>("borderhover");
     await reactivePlugin.app.registerCSS(
       "borderhover",
       `.cloze:hover { border-bottom-color: ${borderhover}; }`
@@ -54,7 +54,7 @@ await plugin.settings.registerStringSetting({
 });
 
 plugin.track(async (reactivePlugin) => {
-  const clozearrow = await reactivePlugin.settings.getSetting("clozearrow");
+  const clozearrow = await reactivePlugin.settings.getSetting<string>("clozearrow");
   await reactivePlugin.app.registerCSS(
     "clozearrow",
     `.rich-text-editor__change-cloze-button, .dark .rich-text-editor__change-cloze-button { color: ${clozearrow}; }`
