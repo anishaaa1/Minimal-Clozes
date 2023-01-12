@@ -45,6 +45,21 @@ async function onActivate(plugin: ReactRNPlugin) {
       `.cloze:hover { border-bottom-color: ${borderhover}; }`
     );
   });
+
+await plugin.settings.registerStringSetting({
+  id: "clozearrow",
+  title: "Cloze Arrow Color (hex)",
+  description: "Provide a hex color for the bottom border when you hover over it.",
+  defaultValue: "#b388eb",
+});
+
+plugin.track(async (reactivePlugin) => {
+  const clozearrow = await reactivePlugin.settings.getSetting("clozearrow");
+  await reactivePlugin.app.registerCSS(
+    "clozearrow",
+    `.rich-text-editor__change-cloze-button, .dark .rich-text-editor__change-cloze-button { color: ${clozearrow}; }`
+  );
+});
 }
 
 async function onDeactivate(_: ReactRNPlugin) {}
