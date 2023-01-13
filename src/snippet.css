@@ -1,8 +1,3 @@
-:root {
-	--base: #c5c5cc;
-	--dbase: #747676;
-	--main: #b388eb;
-}
 .cloze, .dark .cloze {
 	padding: 1px 4px 2px 4px!important;
 	background-color: unset;
@@ -10,24 +5,12 @@
 	/* Rounded Corners */
 	border-radius: 4px!important;
 }
-.light .cloze {
-	border-bottom-color: var(--base);
-}
-.dark .cloze {
-	border-bottom-color: var(--dbase);
-}
-/* On Hover */
-.cloze:hover {
-	border-bottom-color: var(--main);
-}
 /* Cloze Arrow */
 .rich-text-editor__change-cloze-button, .dark .rich-text-editor__change-cloze-button {
 	background-color: unset;
-	color: var(--main);
 }
 .rich-text-editor__change-cloze-button:hover {
 	background-color: unset;
-	color: var(--main);
 } 
 /* Cloze for Latex */
 .rn-editor .latex-node {

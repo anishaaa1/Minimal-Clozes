@@ -60,6 +60,21 @@ plugin.track(async (reactivePlugin) => {
     `.rich-text-editor__change-cloze-button, .dark .rich-text-editor__change-cloze-button { color: ${clozearrow}; }`
   );
   });
+
+await plugin.settings.registerStringSetting({
+  id: "clozearrowhover",
+  title: "Cloze Arrow Color | Hover (hex)",
+  description: "Provide a hex color for the cloze arrow.",
+  defaultValue: "#b388eb",
+  });
+
+plugin.track(async (reactivePlugin) => {
+  const clozearrowhover = await reactivePlugin.settings.getSetting("clozearrowhover");
+  await reactivePlugin.app.registerCSS(
+    "clozearrowhover",
+    `.rich-text-editor__change-cloze-button:hover { color: ${clozearrowhover}; }`
+  );
+  });
 }
 
 async function onDeactivate(_: ReactRNPlugin) {}
