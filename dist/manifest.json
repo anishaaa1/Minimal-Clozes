@@ -1,0 +1,22 @@
+{
+  "manifestVersion": 1,
+  "id": "Anisha-MinimalClozes",
+  "name": "Minimal Clozes",
+  "author": "Anisha",
+  "repoUrl": "https://github.com/anishaaa1/Minimal-Clozes",
+  "version": {
+    "major": 0,
+    "minor": 0,
+    "patch": 1
+  },
+  "theme": [],
+  "enableOnMobile": true,
+  "description": "This snippet modifies the appearance of your clozes to look more minimalistic.",
+  "requestNative": false,
+  "requiredScopes": [
+    {
+      "type": "All",
+      "level": "ReadCreateModify"
+    }
+  ]
+}
