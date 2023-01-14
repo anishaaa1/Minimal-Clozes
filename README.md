@@ -1,9 +1,8 @@
 # Minimal Clozes
+This snippet modifies the appearance of clozes to look more minimalistic.
 
-Modifies the appearance of clozes to look more minimalistic.
-
-## Usage
-
-<!-- TODO: Describe usage -->
-
-<!-- ignore-after -->
+## Preview
+### Light Mode
+![Preview1](https://raw.githubusercontent.com/anishaaa1/Minimal-Clozes/main/src/images/minimal-clozes-light.gif)
+### Dark Mode
+![Preview2](https://raw.githubusercontent.com/anishaaa1/Minimal-Clozes/main/src/images/minimal-clozes-dark.gif)
