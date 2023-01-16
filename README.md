@@ -1,5 +1,5 @@
 # Minimal Clozes
-This snippet modifies the appearance of clozes to look more minimalistic.
+Modifies the appearance of clozes to look less obtrusive.
 
 ## Preview
 ### Light Mode
