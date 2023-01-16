@@ -13,6 +13,6 @@
 	background-color: unset;
 } 
 /* Cloze for Latex */
-.rn-editor .latex-node {
+.light .latex-node, .dark .latex-node {
 	border-bottom-style: none;
 }
