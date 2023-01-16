@@ -6,12 +6,12 @@
   "repoUrl": "https://github.com/anishaaa1/Minimal-Clozes",
   "version": {
     "major": 0,
-    "minor": 0,
-    "patch": 2
+    "minor": 1,
+    "patch": 0
   },
   "theme": [],
   "enableOnMobile": true,
-  "description": "This snippet modifies the appearance of your clozes to look more minimalistic.",
+  "description": "Modifies the appearance of your clozes to look less obtrusive.",
   "requestNative": false,
   "requiredScopes": [
     {
