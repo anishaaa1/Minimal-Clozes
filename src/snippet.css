@@ -1,18 +1,27 @@
-.cloze, .dark .cloze {
+/* Enabled Clozes */
+.cloze,
+.dark .cloze {
 	padding: 1px 4px 2px 4px!important;
 	background-color: unset;
 	border-bottom-width: 2px!important;
 	/* Rounded Corners */
 	border-radius: 4px!important;
 }
+
+/* Disabled Clozes */
+.disabled_cloze,
+.disabled_cloze .latex-node {
+    background-color: unset!important; }
+
 /* Cloze Arrow */
-.rich-text-editor__change-cloze-button, .dark .rich-text-editor__change-cloze-button {
-	background-color: unset;
-}
+.rich-text-editor__change-cloze-button,
+.dark .rich-text-editor__change-cloze-button {
+	background-color: unset; }
+
 .rich-text-editor__change-cloze-button:hover {
-	background-color: unset;
-} 
-/* Cloze for Latex */
-.light .latex-node, .dark .latex-node {
-	border-bottom-style: none;
-}
+	background-color: unset; }
+
+	/* Cloze for Latex */
+.light .latex-node,
+.dark .latex-node {
+	border-bottom-style: none; }

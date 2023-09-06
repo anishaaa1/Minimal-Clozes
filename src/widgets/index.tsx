@@ -2,55 +2,70 @@ import { declareIndexPlugin, ReactRNPlugin } from "@remnote/plugin-sdk";
 
 async function onActivate(plugin: ReactRNPlugin) {
   await plugin.settings.registerStringSetting({
-    id: "borderlight",
-    title: "Bottom Border Color | Light Mode (hex)",
-    description: "Provide a hex color for the bottom border in Light Mode.",
-    defaultValue: "#c5c5cc",
+    id: "baselight",
+    title: "Base Color | Light Mode (hex)",
+    description: "Provide a hex color for the base in Light Mode.",
+    defaultValue: "#C5C5CC",
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderlight = await reactivePlugin.settings.getSetting("borderlight");
+    const baselight = await reactivePlugin.settings.getSetting("baselight");
     await reactivePlugin.app.registerCSS(
-      "borderlight",
-      `.light .cloze { border-bottom-color: ${borderlight}; }`
+      "baselight",
+      `.light .cloze { border-bottom-color: ${baselight}; }`
     );
   });
 
   await plugin.settings.registerStringSetting({
-    id: "borderdark",
-    title: "Bottom Border Color | Dark Mode (hex)",
-    description: "Provide a hex color for the bottom border in Dark Mode.",
+    id: "basedark",
+    title: "Base Color | Dark Mode (hex)",
+    description: "Provide a hex color for the base in Dark Mode.",
     defaultValue: "#747676",
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderdark = await reactivePlugin.settings.getSetting("borderdark");
+    const basedark = await reactivePlugin.settings.getSetting("basedark");
     await reactivePlugin.app.registerCSS(
-      "borderdark",
-      `.dark .cloze { border-bottom-color: ${borderdark}; }`
+      "basedark",
+      `.dark .cloze { border-bottom-color: ${basedark}; }`
     );
   });
 
   await plugin.settings.registerStringSetting({
-    id: "borderhover",
-    title: "Bottom Border Color | Hover (hex)",
-    description: "Provide a hex color for the bottom border when you hover over it.",
-    defaultValue: "#b388eb",
+    id: "enabledbasehover",
+    title: "✅ Enabled | Base Color • Hover (hex)",
+    description: "Provide a hex color for the base when the cloze is enabled (on hover).",
+    defaultValue: "#3CB371",
   });
 
   plugin.track(async (reactivePlugin) => {
-    const borderhover = await reactivePlugin.settings.getSetting("borderhover");
+    const enabledbasehover = await reactivePlugin.settings.getSetting("enabledbasehover");
     await reactivePlugin.app.registerCSS(
-      "borderhover",
-      `.cloze:hover { border-bottom-color: ${borderhover}; }`
+      "basehover",
+      `.cloze:hover { border-bottom-color: ${enabledbasehover}; }`
+    );
+  });
+
+  await plugin.settings.registerStringSetting({
+    id: "disabledbasehover",
+    title: "⛔️ Disabled | Base Color • Hover (hex)",
+    description: "Provide a hex color for the base when the cloze is disabled (on hover).",
+    defaultValue: "#FA8072",
+  });
+  
+  plugin.track(async (reactivePlugin) => {
+    const disabledbasehover = await reactivePlugin.settings.getSetting("disabledbasehover");
+    await reactivePlugin.app.registerCSS(
+      "disabledbasehover",
+      `.disabled_cloze:hover { border-bottom-color: ${disabledbasehover}; }`
     );
   });
 
 await plugin.settings.registerStringSetting({
   id: "clozearrow",
-  title: "Cloze Arrow Color (hex)",
-  description: "Provide a hex color for the cloze arrow.",
-  defaultValue: "#b388eb",
+  title: "✅ Enabled | Cloze Arrow Color (hex)",
+  description: "Provide a hex color for the cloze arrow when the cloze is enabled.",
+  defaultValue: "#3CB371",
   });
 
 plugin.track(async (reactivePlugin) => {
@@ -63,9 +78,9 @@ plugin.track(async (reactivePlugin) => {
 
 await plugin.settings.registerStringSetting({
   id: "clozearrowhover",
-  title: "Cloze Arrow Color | Hover (hex)",
-  description: "Provide a hex color for the cloze arrow.",
-  defaultValue: "#b388eb",
+  title: "✅ Enabled | Cloze Arrow Color • Hover (hex)",
+  description: "Provide a hex color for the cloze arrow when the cloze is enabled (on hover).",
+  defaultValue: "#3CB371",
   });
 
 plugin.track(async (reactivePlugin) => {
@@ -75,6 +90,36 @@ plugin.track(async (reactivePlugin) => {
     `.rich-text-editor__change-cloze-button:hover { color: ${clozearrowhover}; }`
   );
   });
+
+  await plugin.settings.registerStringSetting({
+    id: "disabledclozearrow",
+    title: "⛔️ Disabled | Cloze Arrow Color (hex)",
+    description: "Provide a hex color for the cloze arrow when the cloze is disabled.",
+    defaultValue: "#FA8072",
+    });
+  
+  plugin.track(async (reactivePlugin) => {
+    const disabledclozearrow = await reactivePlugin.settings.getSetting("disabledclozearrow");
+    await reactivePlugin.app.registerCSS(
+      "disabledclozearrow",
+      `.disabled_cloze .rich-text-editor__change-cloze-button, .dark .disabled_cloze .rich-text-editor__change-cloze-button { color: ${disabledclozearrow}; }`
+    );
+    });
+  
+  await plugin.settings.registerStringSetting({
+    id: "disabledclozearrowhover",
+    title: "⛔️ Disabled | Cloze Arrow Color • Hover (hex)",
+    description: "Provide a hex color for the cloze arrow when the cloze is disabled (on hover).",
+    defaultValue: "#FA8072",
+    });
+  
+  plugin.track(async (reactivePlugin) => {
+    const disabledclozearrowhover = await reactivePlugin.settings.getSetting("disabledclozearrowhover");
+    await reactivePlugin.app.registerCSS(
+      "disabledclozearrowhover",
+      `.disabled_cloze .rich-text-editor__change-cloze-button:hover { color: ${disabledclozearrowhover}; }`
+    );
+    });
 }
 
 async function onDeactivate(_: ReactRNPlugin) {}
