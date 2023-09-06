@@ -17,5 +17,5 @@ Minimal Clozes is now available as a plugin!
 Head to `Plugin Settings` to modify the appearance of your clozes to your preference.
 
 <img width="752" alt="image" src="https://github.com/anishaaa1/Minimal-Clozes/assets/68901589/d7064783-fb57-41f6-9de2-0e844047cca7">
-
+<br><br>
 Once you have installed this plugin, you no longer need to keep this CSS snippet in Custom CSS as it may interfere with the plugin itself.
