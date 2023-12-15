@@ -1,6 +1,7 @@
 /* Enabled Clozes */
 .cloze,
-.dark .cloze {
+.dark .cloze,
+.non-tested-cloze {
 	padding: 1px 4px 2px 4px!important;
 	background-color: unset!important;
 	border-bottom-width: 2px!important;
