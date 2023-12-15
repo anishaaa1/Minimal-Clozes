@@ -12,7 +12,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     const baselight = await reactivePlugin.settings.getSetting("baselight");
     await reactivePlugin.app.registerCSS(
       "baselight",
-      `.light .cloze { border-bottom-color: ${baselight}; }`
+      `.light .cloze, .light .non-tested-cloze { border-bottom-color: ${baselight}; }`
     );
   });
 
@@ -27,7 +27,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     const basedark = await reactivePlugin.settings.getSetting("basedark");
     await reactivePlugin.app.registerCSS(
       "basedark",
-      `.dark .cloze { border-bottom-color: ${basedark}; }`
+      `.dark .cloze, .dark .non-tested-cloze { border-bottom-color: ${basedark}; }`
     );
   });
 
@@ -42,7 +42,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     const enabledbasehover = await reactivePlugin.settings.getSetting("enabledbasehover");
     await reactivePlugin.app.registerCSS(
       "basehover",
-      `.cloze:hover { border-bottom-color: ${enabledbasehover}; }`
+      `.cloze:hover, .non-tested-cloze:hover { border-bottom-color: ${enabledbasehover}; }`
     );
   });
 
