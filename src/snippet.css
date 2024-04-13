@@ -14,6 +14,9 @@
 .disabled_cloze .latex-node {
     background-color: unset!important; }
 
+.disabled_cloze span.\!bg-gray-10.dark\:bg-gray-40 {
+	background-color: unset !important; }
+
 /* Cloze Arrow */
 .rich-text-editor__change-cloze-button,
 .dark .rich-text-editor__change-cloze-button {
