@@ -7,11 +7,11 @@
   "version": {
     "major": 1,
     "minor": 1,
-    "patch": 3
+    "patch": 4
   },
   "theme": [],
   "enableOnMobile": true,
-  "description": "Modifies the appearance of your clozes to look less obtrusive.",
+  "description": "Modifies the appearance of your clozes to make them appear just a little less obtrusive.",
   "requestNative": false,
   "requiredScopes": [
     {
