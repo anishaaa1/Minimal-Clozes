@@ -27,11 +27,12 @@
 /* Cloze for Latex */
 .light .latex-node,
 .dark .latex-node {
-	border-bottom-style: none; }
+	border-bottom: none; }
 
 /* Fix for References in Clozes */
-.rem-reference-container.non-tested-cloze {
-    border-bottom-style: none; }
+.rem-reference-container.non-tested-cloze,
+.rem-reference-container.cloze {
+    border-bottom: none; }
 
 /* Cloze Hints */
 .cloze-hint {
