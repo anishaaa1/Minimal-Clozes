@@ -8,6 +8,12 @@
 	/* Rounded Corners */
 	border-radius: 4px !important; }
 
+.rn-subscript.cloze,
+.rn-subscript.non-tested-cloze,
+.rn-superscript.cloze,
+.rn-superscript.non-tested-cloze {
+	border-bottom: none; }
+
 /* Disabled Clozes */
 .disabled_cloze,
 .disabled_cloze .latex-node {
