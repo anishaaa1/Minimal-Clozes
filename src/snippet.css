@@ -1,7 +1,9 @@
 /* Enabled Clozes */
 .cloze,
 .dark .cloze,
-.non-tested-cloze {
+.non-tested-cloze,
+.light .cloze .latex-node__tex,
+.dark .cloze .latex-node__tex {
 	padding: 0px 4px 2px 4px !important;
 	background-color: unset !important;
 	border-bottom-width: 2px !important;
@@ -16,7 +18,8 @@
 
 /* Disabled Clozes */
 .disabled_cloze,
-.disabled_cloze .latex-node {
+.disabled_cloze .latex-node,
+.disabled_cloze .latex-node__tex {
     background-color: unset !important; }
 
 .disabled_cloze span.\!bg-gray-10.dark\:bg-gray-40 {
