@@ -35,8 +35,9 @@
 
 /* Cloze for Latex */
 .light .latex-node,
-.dark .latex-node {
-	border-bottom: none; }
+.dark .latex-node,
+.cloze .latex-node__tex.inline-block {
+	border-bottom: none !important; }
 
 /* Fix for References in Clozes */
 .rem-reference-container.non-tested-cloze,
